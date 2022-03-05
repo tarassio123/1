@@ -1,0 +1,38 @@
+#include <iostream>
+#define N 1000
+using namespace std;
+
+// 3. Удалить элементы массива, цифры которых образуют последовательность чисел Фибоначчи, в которой первое и второе число равно 1.
+
+
+
+
+int main(){
+	int arrays[1000]; // массив из 1000 элементов
+	int arry[1000];
+	for (int i = 0; i < 1000; i++) {
+		arrays[i] = i + 1; 
+	}
+
+	double fib[N + 1]; // числа фибоначчи
+	fib[0] = 0;
+	fib[1] = 1;
+	for (int i = 2; i <= 17; i++)
+		fib[i] = fib[i - 1] + fib[i - 2];
+
+	int p = 0;
+	for (int i = 3; i < 17; i++) {
+		for (int j = 3; j < 1000; j++) {
+			if (fib[i] == arrays[j]) {
+				arry[j] = arrays[j + 1];
+			}
+			else {
+				arry[j] = arrays[j];
+			}
+			
+		}
+	}
+
+	for (int i = 3; i < 1000; i++) { // вывод измененного массива
+		cout << arry[i] << endl;
+	}
