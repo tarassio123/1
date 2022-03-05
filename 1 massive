@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+// 1. Найти максимальное значение массива.
+
+int main(){
+	int arrays[1000]; // массив из 1000 элементов
+	for (int i = 0; i < 1000; i++) {
+		arrays[i] = i + 1; 
+	}
+	int maximum = 0;
+	int b = 0;
+	for (int i = 0; i < 1000; i++) {
+		b = arrays[i];
+		if (b > maximum) {
+			maximum = b;
+		}
+	}
+	cout << maximum;
+	
+}
