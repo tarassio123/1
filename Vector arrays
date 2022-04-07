@@ -10,15 +10,9 @@ int main(){
     for (int i = 0; i < numbers; i++) {
 		vectors.push_back(i + 1); 
     }
-	auto result = max_element(vectors.begin(), vectors.end()); // поиск макс элемента
-	cout << *result;
-	vectors.clear();
-  
-  
-  2.	Вставить максимальное значение массива после элемента, у которого первая и последняя цифры равны.
-  
-  
-  
+    auto result = max_element(vectors.begin(), vectors.end()); // поиск макс элемента
+    cout << *result;
+    vectors.clear();
   
     
 }
