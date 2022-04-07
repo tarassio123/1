@@ -1,1 +1,48 @@
+#include <iostream>
+using namespace std;
 
+// 1. Найти максимальное значение массива.
+
+int main(){
+    
+    int sizes;
+    cin >> sizes;
+    int *darray = new int[sizes]; //создание массива(динамического)
+    
+	for (int i = 0; i < sizes; i++) {
+		darray[i] = i + 1; // заполнение массива
+	}
+	int maximum = 0;
+	int b = 0;
+	for (int i = 0; i < sizes; i++) {
+		b = darray[i];
+		if (b > maximum) {
+			maximum = b;
+		}
+	}
+	cout << maximum;
+	delete [] darray; // очистка памяти
+  
+  // 2. Вставить максимальное значение массива после элемента, у которого первая и последняя цифры равны
+
+	int sizess;
+    cin >> sizess;
+    int *darrays = new int[sizess]; //создание массива(динамического)
+	for (int i = 0; i < sizess; i++) {
+		darrays[i] = i + 1; 
+	}
+
+	for (int i = 0; i < sizess; i++) {
+		if (darrays[i] % 10 == darrays[i] / 10) {
+			darrays[i + 1] = sizess;
+			cout  << darrays[i] << " " << darrays[i + 1];
+			break;
+			
+		}
+
+	}
+	delete [] darrays;
+    
+  return 0;
+    
+}
