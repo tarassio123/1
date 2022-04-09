@@ -36,7 +36,7 @@ int main()
 {
     
     int number, i;
-    int mas[n]={623, 543, 120, 935, 423, 610, 732, 126, 784, 648};
+    int mas[n]={403, 533, 550, 715, 698, 612, 502, 306, 704, 248};
     int dop_mas[n][n];
     for(number=1; number<4; number++)
         sort_number(dop_mas, mas, number);
